@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Шлях до Китаю — Школа китайської мови та культури</title>
+<meta name="description" content="Школа китайської мови та культури «Шлях до Китаю». Онлайн курси китайської для початківців, підготовка до HSK, групові та індивідуальні заняття.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/roboto@5.0.0/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/roboto@5.0.0/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/roboto@5.0.0/700.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Roboto',system-ui,-apple-system,sans-serif;
+    color:#222;
+    line-height:1.6;
+    background:#fff;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+  :root{
+    --red:#c0392b;
+    --red-dark:#a33025;
+    --bg-alt:#f8f8f8;
+    --muted:#6b6b6b;
+    --border:#e5e5e5;
+  }
+
+  .container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  /* HEADER */
+  header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    transition:box-shadow .3s;
+  }
+  header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+
+  .header-top{
+    background:#fafafa;
+    border-bottom:1px solid var(--border);
+    font-size:13px;
+  }
+  .header-top-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px 20px;
+    max-width:1200px;
+    margin:0 auto;
+    gap:20px;
+  }
+  .header-contacts{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    flex-wrap:wrap;
+  }
+  .header-contacts a{
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:6px;
+    transition:color .2s;
+  }
+  .header-contacts a:hover{color:var(--red)}
+  .social-icons{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  .social-icons a{
+    width:32px;height:32px;
+    border-radius:50%;
+    background:var(--bg-alt);
+    display:flex;align-items:center;justify-content:center;
+    transition:all .2s;
+  }
+  .social-icons a:hover{background:var(--red);color:#fff;transform:translateY(-2px)}
+  .social-icons svg{width:16px;height:16px}
+
+  .nav-wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 20px;
+    max-width:1200px;
+    margin:0 auto;
+    gap:20px;
+  }
+  .logo{
+    font-size:20px;
+    font-weight:700;
+    color:var(--red);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-shrink:0;
+  }
+  .logo-icon{
+    width:36px;height:36px;
+    background:var(--red);
+    color:#fff;
+    border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;
+    font-weight:700;
+  }
+
+  .nav-menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    align-items:center;
+  }
+  .nav-menu a{
+    color:#333;
+    font-weight:500;
+    font-size:15px;
+    transition:color .2s;
+    position:relative;
+  }
+  .nav-menu a:hover{color:var(--red)}
+  .nav-menu a::after{
+    content:'';
+    position:absolute;
+    bottom:-4px;left:0;
+    width:0;height:2px;
+    background:var(--red);
+    transition:width .3s;
+  }
+  .nav-menu a:hover::after{width:100%}
+
+  .burger{
+    display:none;
+    width:36px;height:36px;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+  }
+  .burger span{
+    width:24px;height:2px;
+    background:#333;
+    transition:all .3s;
+  }
+  .burger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.active span:nth-child(2){opacity:0}
+  .burger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* HERO */
+  .hero{
+    padding:60px 0 80px;
+    background:linear-gradient(135deg,#fff 0%,#faf5f4 100%);
+    overflow:hidden;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero-title{
+    font-size:48px;
+    font-weight:700;
+    line-height:1.15;
+    margin-bottom:20px;
+    color:#1a1a1a;
+  }
+  .hero-title span{color:var(--red)}
+  .hero-subtitle{
+    font-size:16px;
+    color:var(--muted);
+    margin-bottom:32px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--red);
+    color:#fff;
+    padding:14px 32px;
+    border-radius:50px;
+    font-weight:500;
+    font-size:15px;
+    transition:all .3s;
+    box-shadow:0 4px 14px rgba(192,57,43,.25);
+  }
+  .btn:hover{
+    background:var(--red-dark);
+    transform:translateY(-2px);
+    box-shadow:0 6px 20px rgba(192,57,43,.4);
+  }
+  .btn-outline{
+    background:transparent;
+    color:var(--red);
+    border:2px solid var(--red);
+    box-shadow:none;
+  }
+  .btn-outline:hover{background:var(--red);color:#fff}
+  .hero-image{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+    aspect-ratio:4/5;
+  }
+  .hero-image img{
+    width:100%;height:100%;object-fit:cover;
+  }
+  .hero-badge{
+    position:absolute;
+    top:20px;left:20px;
+    background:#fff;
+    color:var(--red);
+    padding:10px 18px;
+    border-radius:50px;
+    font-weight:700;
+    font-size:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+  }
+
+  /* SECTIONS */
+  section{padding:80px 0}
+  .section-alt{background:var(--bg-alt)}
+  .section-title{
+    font-size:36px;
+    font-weight:700;
+    text-align:center;
+    margin-bottom:12px;
+    color:#1a1a1a;
+  }
+  .section-subtitle{
+    text-align:center;
+    color:var(--muted);
+    font-size:17px;
+    margin-bottom:50px;
+  }
+
+  /* WHY US */
+  .features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .feature-card{
+    background:#fff;
+    padding:32px 28px;
+    border-radius:16px;
+    border:1px solid var(--border);
+    transition:all .3s;
+  }
+  .feature-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    border-color:transparent;
+  }
+  .feature-icon{
+    width:56px;height:56px;
+    background:#fdecea;
+    color:var(--red);
+    border-radius:14px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:28px;
+    margin-bottom:20px;
+  }
+  .feature-title{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .feature-desc{
+    color:var(--muted);
+    font-size:14.5px;
+  }
+
+  /* PRICING */
+  .pricing-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    max-width:950px;
+    margin:0 auto;
+  }
+  .price-card{
+    background:#fff;
+    border-radius:20px;
+    padding:36px 32px;
+    border:2px solid var(--border);
+    transition:all .3s;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+  }
+  .price-card:hover{
+    border-color:var(--red);
+    transform:translateY(-6px);
+    box-shadow:0 20px 50px rgba(192,57,43,.12);
+  }
+  .price-badge{
+    display:inline-block;
+    background:#fdecea;
+    color:var(--red);
+    padding:6px 14px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:18px;
+    align-self:flex-start;
+  }
+  .price-card h3{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:20px;
+  }
+  .price-list{
+    list-style:none;
+    margin-bottom:24px;
+    flex-grow:1;
+  }
+  .price-list li{
+    padding:10px 0;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14.5px;
+  }
+  .price-list li::before{
+    content:'✓';
+    color:var(--red);
+    font-weight:700;
+    flex-shrink:0;
+  }
+  .price-amount{
+    font-size:32px;
+    font-weight:700;
+    color:#1a1a1a;
+    margin-bottom:4px;
+  }
+  .price-amount small{
+    font-size:14px;
+    color:var(--muted);
+    font-weight:400;
+  }
+  .price-note{
+    font-size:12.5px;
+    color:var(--muted);
+    margin:10px 0 20px;
+    line-height:1.5;
+  }
+  .price-card .btn{width:100%;justify-content:center}
+
+  /* SCHEDULE */
+  .schedule-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .schedule-note{
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    margin-top:30px;
+  }
+  .schedule-note a{color:var(--red);text-decoration:underline}
+  .schedule-card{
+    background:#fff;
+    border-radius:16px;
+    padding:28px;
+    border:1px solid var(--border);
+    transition:all .3s;
+    display:flex;
+    flex-direction:column;
+  }
+  .schedule-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+  }
+  .schedule-label{
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    padding:4px 12px;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:14px;
+    align-self:flex-start;
+  }
+  .schedule-card h3{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:16px;
+  }
+  .schedule-details{
+    list-style:none;
+    margin-bottom:20px;
+    flex-grow:1;
+  }
+  .schedule-details li{
+    padding:8px 0;
+    font-size:14px;
+    color:#444;
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+  }
+  .schedule-details li::before{
+    content:'●';
+    color:var(--red);
+    font-size:10px;
+    margin-top:5px;
+    flex-shrink:0;
+  }
+
+  /* PROGRAM */
+  .program-note{
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    margin-bottom:30px;
+    font-style:italic;
+  }
+  .accordion{
+    max-width:850px;
+    margin:0 auto;
+  }
+  .accordion-item{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:12px;
+    margin-bottom:12px;
+    overflow:hidden;
+    transition:all .3s;
+  }
+  .accordion-item.active{
+    border-color:var(--red);
+    box-shadow:0 8px 24px rgba(192,57,43,.1);
+  }
+  .accordion-header{
+    width:100%;
+    padding:18px 24px;
+    text-align:left;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:600;
+    font-size:16px;
+    transition:background .2s;
+  }
+  .accordion-header:hover{background:#fafafa}
+  .accordion-icon{
+    width:28px;height:28px;
+    border-radius:50%;
+    background:#fdecea;
+    color:var(--red);
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;
+    font-weight:700;
+    transition:transform .3s;
+    flex-shrink:0;
+  }
+  .accordion-item.active .accordion-icon{
+    transform:rotate(45deg);
+    background:var(--red);
+    color:#fff;
+  }
+  .accordion-body{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+  }
+  .accordion-body-inner{
+    padding:0 24px 22px;
+    color:#555;
+    font-size:15px;
+    line-height:1.7;
+  }
+  .accordion-body-inner ul{
+    list-style:none;
+    padding-left:0;
+  }
+  .accordion-body-inner ul li{
+    padding:6px 0 6px 22px;
+    position:relative;
+  }
+  .accordion-body-inner ul li::before{
+    content:'';
+    position:absolute;
+    left:0;top:14px;
+    width:8px;height:8px;
+    background:var(--red);
+    border-radius:50%;
+  }
+
+  /* BLOG */
+  .blog-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+  }
+  .blog-card{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    transition:all .3s;
+    display:flex;
+    flex-direction:column;
+  }
+  .blog-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+  }
+  .blog-image{
+    aspect-ratio:16/10;
+    overflow:hidden;
+  }
+  .blog-image img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform .5s;
+  }
+  .blog-card:hover .blog-image img{transform:scale(1.05)}
+  .blog-content{
+    padding:22px 24px;
+    flex-grow:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .blog-date{
+    font-size:12px;
+    color:var(--red);
+    font-weight:600;
+    margin-bottom:8px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+  }
+  .blog-title{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:10px;
+    line-height:1.35;
+  }
+  .blog-excerpt{
+    color:var(--muted);
+    font-size:14.5px;
+    margin-bottom:16px;
+    flex-grow:1;
+  }
+  .blog-link{
+    color:var(--red);
+    font-weight:600;
+    font-size:14px;
+    align-self:flex-start;
+    transition:gap .2s;
+    display:inline-flex;
+    gap:6px;
+  }
+  .blog-link:hover{gap:10px}
+
+  /* FAQ */
+  .faq-wrap{
+    max-width:800px;
+    margin:0 auto;
+  }
+  .faq-intro{
+    text-align:center;
+    color:var(--muted);
+    font-size:16px;
+    margin-top:-30px;
+    margin-bottom:40px;
+  }
+
+  /* FOOTER */
+  footer{
+    background:#1a1a1a;
+    color:#aaa;
+    padding:50px 0 24px;
+    font-size:14px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding-bottom:30px;
+    border-bottom:1px solid #333;
+    margin-bottom:24px;
+  }
+  .footer-logo{
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    max-width:320px;
+  }
+  .footer-socials{
+    display:flex;
+    gap:12px;
+  }
+  .footer-socials a{
+    width:40px;height:40px;
+    border-radius:50%;
+    background:#2a2a2a;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;
+    transition:all .2s;
+  }
+  .footer-socials a:hover{background:var(--red);transform:translateY(-3px)}
+  .footer-socials svg{width:18px;height:18px}
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:14px;
+    font-size:13px;
+    color:#888;
+  }
+  .footer-bottom a{color:#aaa;transition:color .2s}
+  .footer-bottom a:hover{color:var(--red)}
+  .footer-links{display:flex;gap:20px;flex-wrap:wrap}
+
+  /* RESPONSIVE */
+  @media (max-width: 900px){
+    .hero-inner{grid-template-columns:1fr;gap:40px}
+    .hero-title{font-size:36px}
+    .hero-image{max-width:420px;margin:0 auto}
+    .features-grid{grid-template-columns:repeat(2,1fr)}
+    .pricing-grid{grid-template-columns:1fr}
+    .schedule-grid{grid-template-columns:1fr}
+    .blog-grid{grid-template-columns:1fr}
+    .section-title{font-size:28px}
+    section{padding:60px 0}
+    .nav-menu{
+      position:fixed;
+      top:0;right:-100%;
+      width:80%;max-width:320px;
+      height:100vh;
+      background:#fff;
+      flex-direction:column;
+      justify-content:flex-start;
+      padding:90px 30px 30px;
+      box-shadow:-4px 0 20px rgba(0,0,0,.1);
+      transition:right .3s;
+      gap:20px;
+      align-items:flex-start;
+    }
+    .nav-menu.active{right:0}
+    .nav-menu a{font-size:17px}
+    .burger{display:flex}
+    .header-top-inner{flex-direction:column;gap:8px;text-align:center}
+    .header-contacts{justify-content:center}
+  }
+  @media (max-width: 600px){
+    .features-grid{grid-template-columns:1fr}
+    .hero{padding:40px 0 60px}
+    .hero-title{font-size:30px}
+    .hero-subtitle{font-size:15px}
+    .section-title{font-size:24px}
+    .price-card{padding:28px 22px}
+    .header-contacts{font-size:12px;gap:12px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-top">
+    <div class="header-top-inner">
+      <div class="header-contacts">
+        <a href="tel:+380663620623">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +380 (66) 362 06 23
+        </a>
+        <a href="mailto:waytochina888@gmail.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          waytochina888@gmail.com
+        </a>
+      </div>
+      <div class="social-icons">
+        <a href="https://t.me/waytochina888" target="_blank" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.89 8.15l-1.97 9.28c-.15.67-.54.83-1.09.52l-3.01-2.22-1.45 1.4c-.16.16-.3.3-.61.3l.22-3.06 5.58-5.04c.24-.22-.05-.34-.38-.13l-6.9 4.34-2.97-.93c-.65-.2-.66-.65.14-.96l11.6-4.48c.53-.2.99.13.84.98z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/han_yu_for_you/" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.5.9.4.5.7.9.9 1.5.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.5-.5.4-.9.7-1.5.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.5-.9-.4-.5-.7-.9-.9-1.5-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.5.5-.4.9-.7 1.5-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 5.8.1 5 .3 4.2.6c-.8.3-1.5.7-2.2 1.4C1.3 2.7.9 3.4.6 4.2c-.3.8-.5 1.6-.5 2.9C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.2 2.1.5 2.9.3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.6.5 2.9.5 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.1-.2 2.9-.5.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.6.5-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.2-2.1-.5-2.9-.3-.8-.7-1.5-1.4-2.2C21.3 1.3 20.6.9 19.8.6c-.8-.3-1.6-.5-2.9-.5C15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm6.4-11.8c-.8 0-1.4.6-1.4 1.4s.6 1.4 1.4 1.4 1.4-.6 1.4-1.4-.6-1.4-1.4-1.4z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-wrap">
+    <a href="#" class="logo">
+      <span class="logo-icon">中</span>
+      Шлях до Китаю
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#про-школу">Про школу</a></li>
+      <li><a href="#ціни">Ціни</a></li>
+      <li><a href="#програма">Програма</a></li>
+      <li><a href="#блог">Блог</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 class="hero-title">Китайська для <span>початківців</span></h1>
+        <p class="hero-subtitle">
+          Ви давно мріяли дізнатися, що означають китайські ієрогліфи та почати говорити китайською? Тоді цей курс спеціально для вас! Цей курс допоможе вам оволодіти елементарними навичками китайської мови. По закінченню курсу ви будете знати та вміти використовувати 300+ базових слів, вміти говорити на найпростіші теми, писати та друкувати ієрогліфи китайською мовою, а також дізнаєтеся багато цікавого про культуру та звичаї Піднебесної.
+        </p>
+        <a href="https://t.me/waytochina888" target="_blank" class="btn">
+          Записатися на безкоштовний урок
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        </a>
+      </div>
+      <div class="hero-image">
+        <span class="hero-badge">✨ Пробний урок безкоштовно</span>
+        <img src="https://image.qwenlm.ai/public_source/792489d0-aa03-4b8f-82e9-534d36065aef/1b14c32e7-087a-4d1f-92b8-4298df3da633.png" alt="Китайська каліграфія">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="про-школу" class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Чому варто обрати нашу школу?</h2>
+    <p class="section-subtitle">Переваги навчання у нас!</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3 class="feature-title">Практика спілкування</h3>
+        <p class="feature-desc">Ви вчитеся говорити справжньою китайською, якою говорять китайці. Вже з перших уроків ви вчитеся розуміти китайську мову на слух.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3 class="feature-title">Постійна підтримка</h3>
+        <p class="feature-desc">З радістю допоможемо вирішити всі ваші питання.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3 class="feature-title">Онлайн заняття</h3>
+        <p class="feature-desc">Можливість займатися з будь-якої точки світу. Ви можете обрати зручний для вас час занять.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3 class="feature-title">Сучасні навчальні матеріали</h3>
+        <p class="feature-desc">Ви займаєтеся по оригінальним підручникам пекінського видавництва.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏮</div>
+        <h3 class="feature-title">Культура і традиції Китаю</h3>
+        <p class="feature-desc">Разом з вивченням мови ви також вивчаєте культуру і традиції Китаю.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎓</div>
+        <h3 class="feature-title">Сертифікат</h3>
+        <p class="feature-desc">Кожен учень отримує сертифікат про успішне завершення навчання після складання іспиту.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="ціни">
+  <div class="container">
+    <h2 class="section-title">Оберіть один з двох зручних для вас форматів навчання онлайн</h2>
+    <p class="section-subtitle">Відкрито новий набір учнів!</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <span class="price-badge">Для початківців</span>
+        <h3>Навчання у групі</h3>
+        <ul class="price-list">
+          <li>Тривалість курсу 5–6 місяців (в залежності від темпу групи)</li>
+          <li>40 занять по 80 хвилин</li>
+          <li>2 рази на тиждень</li>
+          <li>Вечірній та ранковий час</li>
+          <li>До 6 учнів у групі</li>
+          <li>Безкоштовне перше пробне заняття</li>
+        </ul>
+        <div class="price-amount">2 800 грн <small>/ 8 занять</small></div>
+        <p class="price-note">Додатково оплачується лише вартість підручника та робочого зошита (за бажанням). Приблизно 600 грн. В електронному вигляді всі матеріали входять у вартість навчання.</p>
+        <a href="https://t.me/waytochina888" target="_blank" class="btn">Записатися</a>
+      </div>
+      <div class="price-card">
+        <span class="price-badge">Ідеальний для бізнесу</span>
+        <h3>Індивідуальні заняття</h3>
+        <ul class="price-list">
+          <li>Тривалість заняття 50 хвилин</li>
+          <li>Кількість занять на тиждень обговорюється</li>
+          <li>Зручний для вас час (обговорюється)</li>
+          <li>Спілкування з викладачем один на один</li>
+          <li>Вартість занять для рівнів HSK1 та HSK2 — 550 грн за одне заняття</li>
+          <li>Вартість занять для рівнів HSK3 та HSK4 — 600–650 грн за одне заняття</li>
+          <li>Безкоштовне перше пробне заняття</li>
+        </ul>
+        <div class="price-amount">від 550 грн <small>/ заняття</small></div>
+        <p class="price-note">Додатково оплачується лише вартість підручника та робочого зошита (за бажанням). Приблизно 600 грн. В електронному вигляді всі матеріали входять у вартість навчання.</p>
+        <a href="https://t.me/waytochina888" target="_blank" class="btn">Записатися</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Новий старт груп початкового рівня</h2>
+    <p class="section-subtitle">Обирай зручний час для вивчення китайської мови</p>
+    <div class="schedule-grid">
+      <div class="schedule-card">
+        <span class="schedule-label">Ранок</span>
+        <h3>Ранкова група</h3>
+        <ul class="schedule-details">
+          <li>До 6 учнів</li>
+          <li>Понеділок, середа 10:00–11:20</li>
+          <li>2 рази на тиждень</li>
+          <li>Йде набір в групу</li>
+        </ul>
+        <a href="https://t.me/waytochina888" target="_blank" class="btn">Записатися</a>
+      </div>
+      <div class="schedule-card">
+        <span class="schedule-label">Вечір</span>
+        <h3>Вечірня група</h3>
+        <ul class="schedule-details">
+          <li>До 6 учнів</li>
+          <li>Понеділок, середа 19:30–20:50</li>
+          <li>2 рази на тиждень</li>
+          <li>Йде набір в групу</li>
+        </ul>
+        <a href="https://t.me/waytochina888" target="_blank" class="btn">Записатися</a>
+      </div>
+      <div class="schedule-card">
+        <span class="schedule-label">Вихідні</span>
+        <h3>Група вихідного дня</h3>
+        <ul class="schedule-details">
+          <li>До 6 учнів</li>
+          <li>Субота або неділя 10:00–12:00</li>
+          <li>1 раз на тиждень</li>
+          <li>Вартість 2200 грн за 4 заняття в групі тривалістю 120 хвилин</li>
+        </ul>
+        <a href="https://t.me/waytochina888" target="_blank" class="btn">Записатися</a>
+      </div>
+    </div>
+    <p class="schedule-note">*Уточнюйте інформацію <a href="https://t.me/waytochina888" target="_blank">за посиланням</a>.</p>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="програма">
+  <div class="container">
+    <h2 class="section-title">Програма курсу HSK1</h2>
+    <p class="program-note">*На сайті представлена програма перших 3-х уроків для ознайомлення. Вся програма курсу складається з 15 уроків.</p>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Урок 1</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <ul>
+              <li>4 тони в китайській мові</li>
+              <li>9 базових ієрогліфів</li>
+              <li>Пояснення піньїну</li>
+              <li>Ініціалі та фіналі</li>
+              <li>Друкування ієрогліфів на телефоні та на комп'ютері</li>
+              <li>Різниця між традиційними та спрощеними ієрогліфами</li>
+              <li>Правило зміни тонів для слів з третім тоном</li>
+              <li>5 базових рисок в ієрогліфах</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Урок 2</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <ul>
+              <li>Повторення вивченого в перший тиждень</li>
+              <li>Нейтральний або п'ятий тон в китайській мові</li>
+              <li>Розташування тонів в ієрогліфах</li>
+              <li>Члени сім'ї китайською</li>
+              <li>3 базові риски в ієрогліфах</li>
+              <li>8 нових ієрогліфів</li>
+              <li>Робота з робочим зошитом</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Урок 3</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <ul>
+              <li>Вчимося представлятися та говорити по національність</li>
+              <li>Питальна частинка 什么？</li>
+              <li>Побудова речення з дієсловом 是</li>
+              <li>Питальне речення з 吗</li>
+              <li>Різниця у вимові j,q,x та z,c,s</li>
+              <li>Вимова i,u,ü</li>
+              <li>Правила зміни тонів для ієрогліфа 不</li>
+              <li>Правила піньїну для ü після j,q,x</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="блог" class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Блог</h2>
+    <p class="section-subtitle">Цікаві статті про китайську мову та культуру</p>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="https://image.qwenlm.ai/public_source/792489d0-aa03-4b8f-82e9-534d36065aef/18af582b8-c7d9-4bef-b142-7417f4fbc5aa.png" alt="11.11">
+        </div>
+        <div class="blog-content">
+          <div class="blog-date">11 Листопада</div>
+          <h3 class="blog-title">11.11 — Всесвітній день шопінгу та День одиноких людей у Китаї</h3>
+          <p class="blog-excerpt">Щороку 11 листопада Китай перетворюється на найбільший у світі ярмарок знижок. Дізнайтеся про історію свята та його культурне значення.</p>
+          <a href="#" class="blog-link">Читати далі →</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="https://image.qwenlm.ai/public_source/792489d0-aa03-4b8f-82e9-534d36065aef/1cce0f0d6-86b7-4ea3-a99a-61657972be62.png" alt="虫 chóng">
+        </div>
+        <div class="blog-content">
+          <div class="blog-date">Ієрогліфи</div>
+          <h3 class="blog-title">虫 — chóng: ієрогліф та слова пов'язані з комахами та тваринами</h3>
+          <p class="blog-excerpt">Ієрогліф 虫 є ключем для багатьох слів, що описують комах та тварин. Розглянемо найцікавіші приклади та їх використання.</p>
+          <a href="#" class="blog-link">Читати далі →</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="https://image.qwenlm.ai/public_source/792489d0-aa03-4b8f-82e9-534d36065aef/17b59e59d-4567-4572-a17b-ae2e1ae3259b.png" alt="Кохання">
+        </div>
+        <div class="blog-content">
+          <div class="blog-date">Лексика</div>
+          <h3 class="blog-title">Лексика на тему "Кохання" ❤️ Частина 1</h3>
+          <p class="blog-excerpt">Вивчаємо романтичну лексику китайською мовою. Добірка найпопулярніших слів та виразів для тих, хто хоче говорити про почуття.</p>
+          <a href="#" class="blog-link">Читати далі →</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-image">
+          <img src="https://image.qwenlm.ai/public_source/792489d0-aa03-4b8f-82e9-534d36065aef/17661a61d-9c27-4054-b1a6-64998127059a.png" alt="粽子">
+        </div>
+        <div class="blog-content">
+          <div class="blog-date">Культура</div>
+          <h3 class="blog-title">粽子 — Традиційна страва до Фестивалю Драконового Човна</h3>
+          <p class="blog-excerpt">Рисові пельмені в бамбуковому листі — символ одного з найважливіших свят Китаю. Дізнайтеся про історію та рецепти цієї страви.</p>
+          <a href="#" class="blog-link">Читати далі →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <h2 class="section-title">Найпоширеніші питання</h2>
+    <p class="faq-intro">Якщо у вас є ще якісь питання, то пишіть нам в месенджерах або телефонуйте.</p>
+    <div class="accordion faq-wrap">
+      <div class="accordion-item">
+        <button class="accordion-header"><span>Як проходять заняття?</span><span class="accordion-icon">+</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">Всі уроки проходять в програмі Zoom, яку вам необхідно встановити перед початком.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span>Якщо я пропустив(ла) урок?</span><span class="accordion-icon">+</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">Всі заняття для вашої зручності записуються. Записи уроків залишаються з вами назавжди.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span>Чи є пробні уроки?</span><span class="accordion-icon">+</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">Для групових занять пробним вважається перший урок. Якщо ви вирішуєте продовжити, то він входить в вартість першого місяця навчання. Якщо ні — ви нічого не платите. Для індивідуальних також існує перший пробний безкоштовний урок, але він не переноситься.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span>Як і куди оплачувати?</span><span class="accordion-icon">+</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">Оплата занять відбувається заздалегідь перед кожним наступним платіжним періодом на розрахунковий рахунок ФОП.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span>Чи видається сертифікат?</span><span class="accordion-icon">+</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">Так, сертифікат видається після успішної здачі екзамену в кінці курсу, до якого ми заздалегідь готуємося.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span>Чи зможу я потім підтвердити свій рівень на екзамені HSK?</span><span class="accordion-icon">+</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">Так, зможете! Ми одночасно вивчаємо мову і готуємося до екзамену.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span>Скільки учнів у групі?</span><span class="accordion-icon">+</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">В групі займається до 6 учнів.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header"><span>Чи можу я у вас займатися, якщо у мене немає стабільного графіку роботи?</span><span class="accordion-icon">+</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">Так, можете. В такому разі графік обговорюється індивідуально.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">"Шлях до Китаю" — школа китайської мови та культури</div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/han_yu_for_you/" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.5.9.4.5.7.9.9 1.5.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.5-.5.4-.9.7-1.5.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.5-.9-.4-.5-.7-.9-.9-1.5-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.5.5-.4.9-.7 1.5-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 5.8.1 5 .3 4.2.6c-.8.3-1.5.7-2.2 1.4C1.3 2.7.9 3.4.6 4.2c-.3.8-.5 1.6-.5 2.9C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.2 2.1.5 2.9.3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.6.5 2.9.5 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.1-.2 2.9-.5.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.6.5-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.2-2.1-.5-2.9-.3-.8-.7-1.5-1.4-2.2C21.3 1.3 20.6.9 19.8.6c-.8-.3-1.6-.5-2.9-.5C15.7 0 15.3 0 12 0zm0 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm6.4-11.8c-.8 0-1.4.6-1.4 1.4s.6 1.4 1.4 1.4 1.4-.6 1.4-1.4-.6-1.4-1.4-1.4z"/></svg>
+        </a>
+        <a href="https://t.me/waytochina888" target="_blank" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.89 8.15l-1.97 9.28c-.15.67-.54.83-1.09.52l-3.01-2.22-1.45 1.4c-.16.16-.3.3-.61.3l.22-3.06 5.58-5.04c.24-.22-.05-.34-.38-.13l-6.9 4.34-2.97-.93c-.65-.2-.66-.65.14-.96l11.6-4.48c.53-.2.99.13.84.98z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 "Шлях до Китаю" — школа китайської мови та культури</div>
+      <div class="footer-links">
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Угода користувача</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky header shadow
+  const headerEl = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) headerEl.classList.add('scrolled');
+    else headerEl.classList.remove('scrolled');
+  });
+
+  // Burger menu
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('navMenu');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  // Close menu on link click
+  document.querySelectorAll('#navMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // Accordions
+  document.querySelectorAll('.accordion-header').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const body = item.querySelector('.accordion-body');
+      const inner = body.querySelector('.accordion-body-inner');
+      const isActive = item.classList.contains('active');
+
+      // Close siblings within same accordion
+      const accordion = item.parentElement;
+      accordion.querySelectorAll('.accordion-item').forEach(it => {
+        if (it !== item) {
+          it.classList.remove('active');
+          it.querySelector('.accordion-body').style.maxHeight = null;
+        }
+      });
+
+      if (isActive) {
+        item.classList.remove('active');
+        body.style.maxHeight = null;
+      } else {
+        item.classList.add('active');
+        body.style.maxHeight = inner.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
